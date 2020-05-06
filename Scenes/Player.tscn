@@ -70,6 +70,10 @@ drag_margin_v_enabled = false
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
-[node name="Sky" type="Sprite" parent="ParallaxBackground"]
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2( 0.1, 0.2 )
+motion_mirroring = Vector2( 640, 640 )
+
+[node name="Sky" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
 texture = ExtResource( 13 )
 centered = false

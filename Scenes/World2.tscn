@@ -12,7 +12,7 @@ position = Vector2( 58.6784, 253.662 )
 [node name="World Complete" parent="." instance=ExtResource( 2 )]
 position = Vector2( 607.245, 228.98 )
 rotation = -4.71239
-next_world = "res://Scenes/World.tscn"
+next_world = "res://Scenes/World3.tscn"
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = ExtResource( 3 )
