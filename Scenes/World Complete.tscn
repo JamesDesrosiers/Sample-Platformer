@@ -3,13 +3,11 @@
 [ext_resource path="res://Scenes/WorldCompelte.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/Tiles/Purple Portal Sprite Sheet.png" type="Texture" id=2]
 
-
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 6.41962
 height = 26.9826
 
 [node name="World Complete" type="Area2D"]
-editor/display_folded = true
 position = Vector2( 576, 64 )
 script = ExtResource( 1 )
 __meta__ = {
