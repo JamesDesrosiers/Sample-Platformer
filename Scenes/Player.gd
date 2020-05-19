@@ -26,6 +26,7 @@ func _physics_process(delta):
 	else:
 		if self.is_on_floor():
 			motion.x = lerp(motion.x, 0, 0.10)
+			# warning-ignore:integer_division
 			if motion.x < MAX_SPEED / 2:
 				$Sprite.play("Idle")
 		else:
