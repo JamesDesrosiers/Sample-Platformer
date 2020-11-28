@@ -11,7 +11,7 @@ position = Vector2( 58.6784, 253.662 )
 
 [node name="World Complete" parent="." instance=ExtResource( 2 )]
 position = Vector2( 1632, -288 )
-next_world = "res://Scenes/World.tscn"
+next_world = "res://Scenes/Title Screen.tscn"
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = ExtResource( 3 )
