@@ -1,11 +1,15 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Fonts/Spider Talent.otf" type="DynamicFontData" id=1]
 [ext_resource path="res://Sprites/Menu/ButtonBlank.png" type="Texture" id=2]
 [ext_resource path="res://Scenes/Title Screen.gd" type="Script" id=3]
+[ext_resource path="res://Sprites/Sky.png" type="Texture" id=4]
+[ext_resource path="res://Scenes/DirtAutoTile.tres" type="TileSet" id=5]
 
 [sub_resource type="DynamicFont" id=1]
 size = 55
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 1 )
 
 [sub_resource type="DynamicFont" id=2]
@@ -21,11 +25,21 @@ __meta__ = {
 }
 first_world = "res://Scenes/World.tscn"
 
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 319.209, 79.8023 )
+texture = ExtResource( 4 )
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource( 5 )
+format = 1
+tile_data = PoolIntArray( -65527, 0, 5, 8, 0, 1, 9, 0, 11, 65544, 0, 131073, 65545, 0, 131074, 131080, 0, 131073, 131081, 0, 131074, 196616, 0, 131073, 196617, 0, 131074, 262148, 0, 5, 262152, 0, 131073, 262153, 0, 131074, 327681, 0, 1, 327682, 0, 65536, 327683, 0, 65536, 327684, 0, 131082, 327685, 0, 65536, 327686, 0, 65536, 327687, 0, 65536, 327688, 0, 65540, 327689, 0, 131074, 393216, 0, 196608, 393217, 0, 65544, 393218, 0, 131072, 393219, 0, 131072, 393220, 0, 131072, 393221, 0, 131072, 393222, 0, 131072, 393223, 0, 131072, 393224, 0, 131072, 393225, 0, 65538 )
+
 [node name="Tween" type="Tween" parent="."]
 
 [node name="Menu" type="VBoxContainer" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
+margin_top = 22.0
 margin_right = -1.0
 margin_bottom = -3.0
 __meta__ = {
@@ -41,17 +55,25 @@ custom_fonts/font = SubResource( 1 )
 text = "Sample Platformer"
 align = 1
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Menu"]
+[node name="CenterContainer" type="CenterContainer" parent="Menu"]
 margin_top = 63.0
 margin_right = 639.0
 margin_bottom = 227.0
 
-[node name="Start Button" type="TextureButton" parent="Menu/VBoxContainer"]
-margin_right = 639.0
+[node name="VBoxContainer" type="VBoxContainer" parent="Menu/CenterContainer"]
+margin_left = 169.0
+margin_right = 469.0
+margin_bottom = 164.0
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Start Button" type="TextureButton" parent="Menu/CenterContainer/VBoxContainer"]
+margin_right = 300.0
 margin_bottom = 80.0
 texture_normal = ExtResource( 2 )
 
-[node name="Label" type="Label" parent="Menu/VBoxContainer/Start Button"]
+[node name="Label" type="Label" parent="Menu/CenterContainer/VBoxContainer/Start Button"]
 margin_right = 299.0
 margin_bottom = 66.0
 custom_fonts/font = SubResource( 2 )
@@ -62,13 +84,13 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Exit Button" type="TextureButton" parent="Menu/VBoxContainer"]
+[node name="Exit Button" type="TextureButton" parent="Menu/CenterContainer/VBoxContainer"]
 margin_top = 84.0
-margin_right = 639.0
+margin_right = 300.0
 margin_bottom = 164.0
 texture_normal = ExtResource( 2 )
 
-[node name="Label" type="Label" parent="Menu/VBoxContainer/Exit Button"]
+[node name="Label" type="Label" parent="Menu/CenterContainer/VBoxContainer/Exit Button"]
 margin_right = 299.0
 margin_bottom = 61.0
 custom_fonts/font = SubResource( 2 )
@@ -89,5 +111,5 @@ color = Color( 0, 0, 0, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-[connection signal="pressed" from="Menu/VBoxContainer/Start Button" to="." method="_on_Start_Button_pressed"]
-[connection signal="pressed" from="Menu/VBoxContainer/Exit Button" to="." method="_on_Exit_Button_pressed"]
+[connection signal="pressed" from="Menu/CenterContainer/VBoxContainer/Start Button" to="." method="_on_Start_Button_pressed"]
+[connection signal="pressed" from="Menu/CenterContainer/VBoxContainer/Exit Button" to="." method="_on_Exit_Button_pressed"]
