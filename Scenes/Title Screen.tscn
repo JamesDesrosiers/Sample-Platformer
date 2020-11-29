@@ -1,16 +1,16 @@
 [gd_scene load_steps=9 format=2]
 
-[ext_resource path="res://Fonts/Spider Talent.otf" type="DynamicFontData" id=1]
+[ext_resource path="res://Fonts/Bagnard.otf" type="DynamicFontData" id=1]
 [ext_resource path="res://Sprites/Menu/ButtonBlank.png" type="Texture" id=2]
 [ext_resource path="res://Scenes/Title Screen.gd" type="Script" id=3]
 [ext_resource path="res://Sprites/Sky.png" type="Texture" id=4]
 [ext_resource path="res://Scenes/DirtAutoTile.tres" type="TileSet" id=5]
 [ext_resource path="res://Sprites/Menu/ButtonBlank_Hover.png" type="Texture" id=6]
 
-[sub_resource type="DynamicFont" id=1]
-size = 55
-outline_size = 2
-outline_color = Color( 0, 0, 0, 1 )
+[sub_resource type="DynamicFont" id=3]
+size = 66
+outline_size = 1
+outline_color = Color( 0.0352941, 0.00392157, 0.00392157, 1 )
 font_data = ExtResource( 1 )
 
 [sub_resource type="DynamicFont" id=2]
@@ -48,22 +48,22 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Tittle" type="Label" parent="Menu"]
-margin_right = 639.0
-margin_bottom = 59.0
+[node name="Title" type="Label" parent="Menu"]
+margin_right = 682.0
+margin_bottom = 67.0
 size_flags_horizontal = 3
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = SubResource( 3 )
 text = "Sample Platformer"
 align = 1
 
 [node name="CenterContainer" type="CenterContainer" parent="Menu"]
-margin_top = 63.0
-margin_right = 639.0
-margin_bottom = 227.0
+margin_top = 71.0
+margin_right = 682.0
+margin_bottom = 235.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Menu/CenterContainer"]
-margin_left = 169.0
-margin_right = 469.0
+margin_left = 191.0
+margin_right = 491.0
 margin_bottom = 164.0
 __meta__ = {
 "_edit_group_": true
