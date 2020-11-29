@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Fonts/Spider Talent.otf" type="DynamicFontData" id=1]
 [ext_resource path="res://Sprites/Menu/ButtonBlank.png" type="Texture" id=2]
 [ext_resource path="res://Scenes/Title Screen.gd" type="Script" id=3]
 [ext_resource path="res://Sprites/Sky.png" type="Texture" id=4]
 [ext_resource path="res://Scenes/DirtAutoTile.tres" type="TileSet" id=5]
+[ext_resource path="res://Sprites/Menu/ButtonBlank_Hover.png" type="Texture" id=6]
 
 [sub_resource type="DynamicFont" id=1]
 size = 55
@@ -72,6 +73,7 @@ __meta__ = {
 margin_right = 300.0
 margin_bottom = 80.0
 texture_normal = ExtResource( 2 )
+texture_hover = ExtResource( 6 )
 
 [node name="Label" type="Label" parent="Menu/CenterContainer/VBoxContainer/Start Button"]
 margin_right = 299.0
@@ -89,6 +91,7 @@ margin_top = 84.0
 margin_right = 300.0
 margin_bottom = 164.0
 texture_normal = ExtResource( 2 )
+texture_hover = ExtResource( 6 )
 
 [node name="Label" type="Label" parent="Menu/CenterContainer/VBoxContainer/Exit Button"]
 margin_right = 299.0
