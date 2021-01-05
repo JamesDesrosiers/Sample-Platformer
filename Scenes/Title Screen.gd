@@ -19,4 +19,10 @@ func _on_Start_Button_pressed():
 
 
 func _on_Exit_Button_pressed():
+	var timer = Timer.new()
+	timer.wait_time = float(0.5)
+	timer.one_shot = true
+	self.add_child(timer)
+	timer.start()
+	yield(timer, "timeout")
 	get_tree().quit()

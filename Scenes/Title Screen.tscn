@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Fonts/Bagnard.otf" type="DynamicFontData" id=1]
 [ext_resource path="res://Sprites/Menu/ButtonBlank.png" type="Texture" id=2]
@@ -6,6 +6,8 @@
 [ext_resource path="res://Sprites/Sky.png" type="Texture" id=4]
 [ext_resource path="res://Scenes/DirtAutoTile.tres" type="TileSet" id=5]
 [ext_resource path="res://Sprites/Menu/ButtonBlank_Hover.png" type="Texture" id=6]
+[ext_resource path="res://Audio/switch32.ogg" type="AudioStream" id=7]
+[ext_resource path="res://Scenes/AudioStreamPlayer.gd" type="Script" id=8]
 
 [sub_resource type="DynamicFont" id=1]
 size = 66
@@ -29,6 +31,11 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 first_world = "res://Scenes/World.tscn"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 7 )
+bus = "Sound Effect"
+script = ExtResource( 8 )
 
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 319.209, 79.8023 )
@@ -133,4 +140,6 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 [connection signal="pressed" from="Menu/CenterContainer/VBoxContainer/Start Button" to="." method="_on_Start_Button_pressed"]
+[connection signal="pressed" from="Menu/CenterContainer/VBoxContainer/Start Button" to="AudioStreamPlayer" method="_on_Button_pressed"]
 [connection signal="pressed" from="Menu/CenterContainer/VBoxContainer/Exit Button" to="." method="_on_Exit_Button_pressed"]
+[connection signal="pressed" from="Menu/CenterContainer/VBoxContainer/Exit Button" to="AudioStreamPlayer" method="_on_Button_pressed"]
