@@ -1,0 +1,12 @@
+Things to add to make complete game:
+-Options menu
+-Levels
+   -Opening Cinematic(Crashing Plane on a mountain)
+   -Tutorial Level(How to move/jump)
+   -Levels with hazards
+       -Bolders(Physics Objects that bounce and roll)
+       -Grapple points(Reference Dani's Video)
+   -Progress saving(Password? It's a webhosted game)
+   -At least 15 good levels
+-Music and Sound Effects
+-Polish and style
